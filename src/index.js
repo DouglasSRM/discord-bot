@@ -19,7 +19,14 @@ client.on("messageCreate", (message) => {
     return;
   }
 
-  if (message.content.includes("meow")) {
+  if (
+    message.content.toLowerCase().includes("glasscat") ||
+    message.content.toLowerCase().includes("glass cat")
+  ) {
+    message.reply("meoww");
+    return;
+  }
+  if (message.content.toLowerCase().includes("meow")) {
     message.reply("meow!");
   }
 });
