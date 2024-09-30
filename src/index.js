@@ -1,3 +1,5 @@
+//Glass Cat bot. just for fun
+
 require("dotenv").config();
 const { Client, IntentsBitField } = require("discord.js");
 
@@ -23,11 +25,15 @@ client.on("messageCreate", (message) => {
     message.content.toLowerCase().includes("glasscat") ||
     message.content.toLowerCase().includes("glass cat")
   ) {
-    message.reply("meoww");
-    return;
+    message.reply("meow!"); //Make send a random image of cat from an image bank
   }
-  if (message.content.toLowerCase().includes("meow")) {
-    message.reply("meow!");
+});
+
+client.on("interactionCreate", (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === "cat-trivia") {
+    interaction.reply("cat trivia!"); //Make cat trivia game
   }
 });
 
