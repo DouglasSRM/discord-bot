@@ -5,6 +5,8 @@ const commands = [
   {
     name: "cat-trivia",
     description: "Start a cat trivia game",
+
+    //Make a collecting game like the pokemon roll on mudae but to collect different cats, with different rarities and all
   },
 ];
 
