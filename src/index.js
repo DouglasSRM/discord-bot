@@ -22,6 +22,8 @@ client.on("ready", (c) => {
 });
 
 client.on('messageUpdate', async (oldMessage, newMessage) => {
+  if (!ALLOWED_CHANNEL_IDS.includes(newMessage.channel.id)) return;
+  
   try {
     console.log('update')
     // Se a mensagem antiga for partial, tente buscar o conteúdo completo
