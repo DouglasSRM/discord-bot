@@ -3,7 +3,11 @@
 require("dotenv").config();
 const { Client, IntentsBitField } = require("discord.js");
 
-const ALLOWED_CHANNEL_IDS = ['1289779763241812022','1397397940200538202'] 
+const ALLOWED_CHANNEL_IDS = [
+  '1289779763241812022'
+  , '1397397940200538202'
+  , '1397730627868164128'
+] 
 
 var replyed_messages = []
 
